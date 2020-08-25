@@ -7,11 +7,12 @@ export const HeroScreen = ({history}) => {
     const {heroId} = useParams();
     const hero = useMemo(() => getHeroById(heroId), [heroId])
     // const hero = getHeroById(heroId);
-    const {superhero, publisher, alter_ego, first_appearance, characters} = hero;
-
+    
     if(!hero){
         return <Redirect to="/" />
     }
+    
+    const {superhero, publisher, alter_ego, first_appearance, characters} = hero;
 
     const handleReturn = () => {
         if(history.length <= 2){

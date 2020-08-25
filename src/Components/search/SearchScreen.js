@@ -23,7 +23,7 @@ export const SearchScreen = ({history}) => {
     const handleSearch = (e) => {
         e.preventDefault();
         history.push(`?q=${searchText}`);
-        console.log(searchText);
+        // console.log(searchText);
     }
 
     return (
